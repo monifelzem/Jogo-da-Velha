@@ -17,8 +17,7 @@ function initializeGame() {
   ];
   turnPlayer = "player1";
   // Ajusta o título da página (caso seja necessário)
-  document.querySelector("h2").innerHTML =
-    'Vez de: <span id="turnPlayer"></span>';
+  document.querySelector("h2").innerHTML = 'Go: <span id="turnPlayer"></span>';
   updateTitle();
   // Limpa o tabuleiro (caso seja necessário) e adiciona os eventos de clique
   boardRegions.forEach(function (element) {
@@ -98,7 +97,7 @@ function handleWin(regions) {
 }
 
 function handleBoardClick(ev) {
-  // Obtém os índices da região clicada
+  // Registra os índices da região clicada
   const span = ev.currentTarget;
   const region = span.dataset.region; // N.N
   const rowColumnPair = region.split("."); // ["N", "N"]
